@@ -6,26 +6,24 @@ import java.util.Scanner;
 public class StringExperiment {
 
     public static void main(String[] args) {
-        WordCounter countWords = new WordCounter();
-
-        System.out.println("What programming language is this?"); //Prints out a message
+        System.out.printf("What programming language is this?: "); //Prints out a message
         Scanner scanner1 = new Scanner(System.in); //Asks for user input
         String userInput = scanner1.nextLine(); //Stores user input
 
 
-        String part1 = "Hello I am "; //String 1
+        String part1 = "\nHello I am "; //String 1
         String part2 = "HTML"; //String 2
 
-        System.out.println(part1 + part2.replace("HTML", userInput)); //Prints a String and replaces "HTML" with the user input
-        String combined = part1 + part2.replace("HTML", userInput);
+        String combined = part1 + part2.replace("HTML", userInput); //Combines part 1 and part 2. Simultaneously replaces "HTML" in part 2 with the user input
+        System.out.println(combined); //Prints out both parts combined
 
         if (userInput.compareTo(part2) == 0)
-            System.out.println("User input matches the code."); //Prints a message if user input matches code
+            System.out.println("\nUser input matches the code."); //Prints a message if user input matches code
         if (userInput.compareTo(part2) > 0)
-            System.out.println("User input does not match the code."); //Prints a message if user input does not match the code
+            System.out.println("\nUser input does not match the code."); //Prints a message if user input does not match the code
 
-        String totalLetters = "There are a total of: " + (part1.replace(" ", "").replace(",", "") + part2.replace(" ", "")).length() + " letters.";
-
-        System.out.println("Word count: " + WordCounter.countWords(part1 + part2.replace("HTML", userInput)));
+        int totalLetters = combined.replace(" ", "").length(); //Removes all spaces and stores the letter count
+        System.out.println("Letter count: " + totalLetters); //Prints the letter count
+        System.out.println("Word count: " + WordCounter.countWords(part1 + part2.replace("HTML", userInput))); //Prints the word count
     }
 }
