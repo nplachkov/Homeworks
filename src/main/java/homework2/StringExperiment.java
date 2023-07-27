@@ -7,8 +7,8 @@ public class StringExperiment {
 
     public static void main(String[] args) {
         System.out.printf("What programming language is this?: "); //Prints out a message
-        Scanner scanner1 = new Scanner(System.in); //Asks for user input
-        String userInput = scanner1.nextLine(); //Stores user input
+        Scanner stringScanner = new Scanner(System.in); //Asks for user input
+        String userInput = stringScanner.nextLine(); //Stores user input
 
 
         String part1 = "\nHello I am "; //String 1
@@ -17,7 +17,7 @@ public class StringExperiment {
         String combined = part1 + part2.replace("HTML", userInput); //Combines part 1 and part 2. Simultaneously replaces "HTML" in part 2 with the user input
         System.out.println(combined); //Prints out both parts combined
 
-        if (userInput.compareTo(part2) == 0)
+        if (userInput.compareTo(part2) == 0) //Compares if two strings are equal
             System.out.println("\nUser input matches the code."); //Prints a message if user input matches code
         if (userInput.compareTo(part2) > 0)
             System.out.println("\nUser input does not match the code."); //Prints a message if user input does not match the code
