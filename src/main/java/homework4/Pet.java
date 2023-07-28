@@ -6,6 +6,7 @@ public class Pet {
     private String sex;
     private byte age;
     private String name;
+    private byte ID;
 
 
 //Getters and Setters
@@ -18,7 +19,7 @@ public class Pet {
             this.breed = breed;
         }
         else{
-            //System.out.println("Error. Please enter a valid breed.");
+            System.out.println("Error. Please enter a valid breed.");
         }
     }
 
@@ -31,7 +32,7 @@ public class Pet {
             this.weight = weight;
         }
         else{
-            //System.out.println("Error. Please enter a valid weight.");
+            System.out.println("Error. Please enter a valid weight.");
         }
     }
 
@@ -44,7 +45,7 @@ public class Pet {
             this.sex = sex;
         }
         else{
-            //System.out.println("Error. Please enter a valid sex.");
+            System.out.println("Error. Please enter a valid sex.");
         }
     }
 
@@ -57,7 +58,7 @@ public class Pet {
             this.age = age;
         }
         else {
-            //System.out.println("Error. Please enter a valid age.");
+            System.out.println("Error. Please enter a valid age.");
         }
     }
 
@@ -70,8 +71,16 @@ public class Pet {
             this.name = name;
         }
         else {
-            //System.out.println("Error. Please enter a valid name.");
+            System.out.println("Error. Please enter a valid name.");
         }
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(byte ID) {
+        this.ID = ID;
     }
 
     //actions
@@ -97,12 +106,13 @@ public class Pet {
     public Pet(String breed){
         setBreed(breed);
     }
-    public void petDetails(){
+    public boolean petDetails(){
         System.out.println("Name: " + getName());
         System.out.println("Age: " + getAge() + " years");
         System.out.println("Type: " + getClass().getSimpleName());
         System.out.println("Breed: " + getBreed());
         System.out.println("Sex: " + getSex());
         System.out.println("Weight: " + getWeight() + "kg");
+        return false;  //TODO What to do in order to avoid the return?
     }
 }
