@@ -24,8 +24,10 @@ public class Test{
 
         if (userInput == Hera.getID()) {
             System.out.println(Hera.petDetails());
+            Hera.bark();
         } else if (userInput == Stevie.getID()) {
             System.out.println(Stevie.petDetails());
+            Stevie.speak();
         }
         else {
             System.out.println("Unable to find pet ID.");
