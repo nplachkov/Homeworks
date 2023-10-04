@@ -32,4 +32,5 @@ public class TwoNumbers {
         numbersAverage(numberOne,numberTwo);
         sumTwoNumbers(numberOne,numberTwo);
     }
+
 }
